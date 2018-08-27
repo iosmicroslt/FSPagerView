@@ -161,6 +161,11 @@ open class FSPagerView: UIView,UICollectionViewDataSource,UICollectionViewDelega
         }
     }
     
+    @objc
+    open var selectedItems: [IndexPath]? {
+        return self.collectionView.indexPathsForSelectedItems
+    }
+    
     /// The transformer of the pager view.
     @objc
     open var transformer: FSPagerViewTransformer? {
